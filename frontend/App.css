@@ -1,0 +1,250 @@
+.App {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.welcome-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.welcome-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.welcome-header h1 {
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.welcome-content {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+}
+
+.feature-card p {
+    opacity: 0.9;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cta-section {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0 0 40px 0;
+}
+
+.role-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.role-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 160px;
+    backdrop-filter: blur(10px);
+}
+
+.student-btn {
+    background: rgba(34, 197, 94, 0.2);
+    border: 2px solid rgba(34, 197, 94, 0.5);
+    color: white;
+}
+
+.tutor-btn {
+    background: rgba(59, 130, 246, 0.2);
+    border: 2px solid rgba(59, 130, 246, 0.5);
+    color: white;
+}
+
+.admin-btn {
+    background: rgba(239, 68, 68, 0.2);
+    border: 2px solid rgba(239, 68, 68, 0.5);
+    color: white;
+}
+
+.role-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.student-btn:hover {
+    background: rgba(34, 197, 94, 0.3);
+}
+
+.tutor-btn:hover {
+    background: rgba(59, 130, 246, 0.3);
+}
+
+.admin-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+}
+
+.btn-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.stats-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.stat {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+.welcome-footer {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.welcome-footer p {
+    font-size: 1.2rem;
+    margin: 0 0 15px 0;
+    font-weight: 600;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 0.9rem;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .welcome-header h1 {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .role-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .role-btn {
+        width: 200px;
+    }
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+    .stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
